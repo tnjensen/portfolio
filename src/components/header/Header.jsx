@@ -20,7 +20,7 @@ function Header(){
     return(
         <header>
              <div className="logo">
-                <Link to={'/'}><img src="src/assets/images/elvehavn_1.jpg" alt="avatar" /></Link>
+                <Link to={'/'}><img src="/images/elvehavn_1.jpg" alt="avatar" /></Link>
                 <p>Thomas N. Jensen</p>
             </div>
             <nav className='navigation' ref={ref}>
