@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --black: #111;
+  --light-blue: #1972de;
+  --blue: #2C4A73;
+  --dark-blue: rgb(0, 0, 255);
+  --red: #FF5443;
+  --gray: #d2d2d2;
+  --white: #F2F2F2;
+  --cta-error:#a44029;
+  --text-white: #fffefe;
+}
+
+.wrapper{
+  max-width: 1160px;
+  margin: 0 auto;
+  background-color: var(--white);
+  min-height: 100vh;
+}

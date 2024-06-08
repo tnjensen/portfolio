@@ -1,0 +1,142 @@
+@import '../../App.scss';
+
+.main{
+    padding-top: 20px;
+    max-width: 60%;
+    margin: 0 auto;
+
+    .main-content{
+        padding: 0 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        
+        @include tablet{
+          
+        }
+
+        p{
+            margin: 0;
+            
+            span{
+                color: var(--light-blue);
+                font-weight: 600;
+                font-size: larger;
+                letter-spacing: .05rem;
+                margin-top: 10px;
+            }
+        }
+        
+       .cta{
+            margin: 10px 0;
+            background-color: var(--cta-error);
+            max-width: 130px;
+            text-align: center;
+            padding: 9px 12px;
+            border-radius: 3px;
+            border: none;
+            position: relative;
+            top: 10px;
+
+            &:hover{
+                color: var(--cta-error);
+                background-color: var(--text-white);
+                cursor: pointer;
+            }
+        }
+        
+        .landing-img{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            img{
+                margin: 30px 0;
+                width: 130px;
+                height: auto;
+                border-radius: 50%;
+
+                @include tablet{
+                    width: 150px;
+                }
+            }
+            figcaption{
+                max-width: 50px;
+                position: relative;
+                left: -40px;
+                
+            }
+        }
+        
+        .landing-icon{
+            display: flex;
+            flex-direction: column;
+            animation: slide-in-left 1.2s ease-in-out both;
+            
+            img{
+                position: relative;
+                left: 10px;
+                width: 100px;
+                height: auto;
+                margin: 10px 0;
+            }
+            figcaption{
+                margin-top: 10px;
+                max-width: 50%;
+                justify-content: center;
+                background-color: var(--text-white);
+                padding: 10px;
+                border-radius: 5px;
+                
+                @include tablet{
+                    max-width: 40%;
+                }
+                a{
+                    color: var(--black);
+                    
+                }
+            } 
+        }
+       
+        .learn-more{
+            color: var(--text-white);
+            text-decoration: none;
+        }
+       
+        .name{
+            color: var(--light-blue);
+        }
+        
+        
+        #index{
+            scroll-margin-top: 8em;
+        }
+        #portfolio{
+            scroll-margin-top: 5rem;
+        }
+        #about, #contact{
+            scroll-margin-top: 7rem;
+        }
+        .js-scroll{
+            transition: opacity 500ms;
+        }
+        .scrolled.slide-right {
+            animation: slide-in-right 1.2s ease-in-out both;
+        }
+        .scrolled.slide-left {
+            animation: slide-in-left 1.2s ease-in-out both;
+        }
+       
+        @keyframes slide-in-left {
+            0% {
+              transform: translateX(-100px);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+        }
+    }
+
+}

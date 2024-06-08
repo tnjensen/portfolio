@@ -1,0 +1,128 @@
+@mixin mobile{
+  @media (min-width:425px){
+      @content;
+  }
+} 
+@mixin tablet{
+  @media (min-width:768px){
+      @content;
+  }
+}
+@mixin desktop{
+  @media (min-width:992px){
+      @content;
+  }
+}
+@mixin large{
+  @media (min-width:1280px){
+      @content;
+  }
+}
+
+body{
+  font-family: 'PT Sans', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .9rem;
+  color: var(--black);
+  line-height: 1.3;
+  background-color: var(--text-white);
+
+  @include tablet{
+    font-size: 1rem;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'PT Serif', 'Times New Roman', Times, serif;
+}
+h1{
+  font-size: 1.8rem;
+}
+h2{
+  font-size: 1.3rem;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+header{
+  display: flex;
+  min-height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+
+  .menu-button{
+     cursor: pointer;
+
+    @include tablet{
+      display: none
+    }
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p{
+      font-family: "Playfair Display";
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: .05em;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  
+  .navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+    .nav-menu{
+      list-style: none;
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      top: 20px;
+      right: 5px;
+      background-color: #222;
+      color: #fffefe;
+      padding: 10px 30px;
+      
+      li a{
+        color: #fffefe;
+
+        @include tablet{
+          color: #222;
+        }
+      }
+      li a:hover{
+       text-decoration: underline;
+
+      }
+    }
+    .navbar li{
+      cursor: pointer;
+    }
+    .nav-menu-web{
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      background-color: inherit;
+      color: inherit;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+  
+}
+

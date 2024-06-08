@@ -1,0 +1,90 @@
+@import '../../App.scss';
+
+.contact{
+    padding: 10px 0 40px 0;
+    
+    .contact-heading{
+        text-align: center;
+        flex: 0 0 100%;
+    }
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+        /* align-items: center; */
+        padding: 0 15px ;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .contact-details{
+            display: flex;
+            flex-direction: column;
+
+            i{
+                position: relative;
+                left: 0;
+                top: 20px;
+                color: var(--light-blue);
+                font-size: 1.4rem;
+
+                @include tablet{
+                    top: 22px;
+                }
+            }
+            
+            h2{
+                margin-top: 20px;
+            }
+        }
+        .contact-form form{
+            display: flex;
+            flex-direction: column;
+         }
+         
+         .contact-name, .contact-email{
+             margin-left: 32px;
+         }
+         .contact-form h3{
+             margin-top: 20px;
+         }
+         .contact-form input, .contact-form textarea{
+             padding: 5px 0 3px 3px;
+             font-family: inherit !important;
+         }
+         .contact-form{
+             line-height: 1.5;
+             font-size: 1.1rem;
+         }
+         .contact-details, .contact-form{
+             margin: 20px 0 10px 0;
+         }
+         label{
+             margin: 10px 0 2px 0;
+         }
+         .contact-form input[type="submit"]{
+             font-size: 1.1rem;
+             margin-top: 15px;
+             background-color: var(--cta-error);
+             color: var(--text-white);
+             border: none;
+             padding: 10px 0;
+             border-radius: 5px;
+             cursor: pointer; 
+         }
+         .contact-form input[type="submit"]:hover{
+             background-color: var(--text-white);
+             color: var(--cta-error);
+         }
+         .form-error{
+             color: var(--cta-error);
+             display: none;
+             margin-top: 3px;
+         }
+    }
+    
+}

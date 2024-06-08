@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    min-height: 80px;
+
+    nav{
+        position: relative;
+
+        .nav-menu{
+            display: none;
+        }
+        .nav-menu.expanded{
+            display: block;
+        }
+        .menu-button{
+            cursor: pointer;
+        }
+        
+        ul{
+            position: absolute;
+            right: 0;
+            top: 25px;
+            list-style: none;
+            background-color: var(--text-white);
+            padding: 15px 30px 15px 15px;
+
+            li.active{
+               border-bottom: 1px solid var(--red);
+            }
+            a{
+                text-decoration: none;
+                color: var(--black);
+
+                &:hover{
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    header{
+        
+        nav{
+            .nav-menu{
+                display: block;
+            }
+            ul{
+                position: relative;
+                top: 0;
+                right: 0;
+                display: inline-flex;
+                gap: 10px;
+                background-color: inherit;
+
+                a{
+                    color: inherit;
+                }
+            }
+            .menu-button{
+                display: none;
+            }
+        }
+        
+    }
+    
+}

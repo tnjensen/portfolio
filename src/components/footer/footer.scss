@@ -1,0 +1,26 @@
+@import '../../App.scss';
+
+footer{
+
+    .footer-content{
+        min-height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--blue);
+        color: var(--text-white);
+        align-items: center;
+
+        .footer-social i{
+            margin-right: 10px;
+            padding: 5px;
+            color: var(--text-white);
+        }
+        .footer-social i:hover{
+            cursor: pointer;
+            color: var(--blue);
+            background-color: var(--text-white);
+            border-radius: 5px;
+        }
+    }
+   
+}

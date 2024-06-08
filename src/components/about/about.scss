@@ -1,0 +1,87 @@
+@import '../../App.scss';
+
+.about{
+    padding: 10px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .about-heading{
+       margin-bottom: 20px;
+       font-size: 1rem;
+    }
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        max-width: 90vw;
+        align-items: center;
+    
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 80vw;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .about-text{
+            line-height: 1.6;
+            margin: 0 auto;
+            margin-bottom: 20px;           
+        }
+        .about-tech{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                li{
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+        .about-tech i{
+            color: var(--light-blue);
+            font-size: 1.4rem;
+        }
+        .about-icon{
+            animation: slide-in-left 1.2s ease-in-out both;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .about-icon a{
+            color: var(--black)
+        }
+        .about-icon img{
+            margin: 10px 0;
+            width: 80px;
+            height: 80px;
+        }
+        .about-icon p{
+            margin-top: 10px;
+            max-width: 60%;
+            text-align: center;
+            background-color: var(--text-white);
+            padding: 10px;
+            border-radius: 5px;
+            
+            @include tablet{
+                max-width: 70%;
+            }
+        }
+    }
+    
+}
