@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './home.scss';
 
 function Home(){
@@ -7,7 +8,7 @@ function Home(){
                 <p>Hello, my name is</p>
                 <h1 className="name">Thomas</h1>
                 <p>and I&apos;m a <span className="span">frontend developer</span></p>
-                <a href="#portfolio" className="cta learn-more">Learn More</a>
+                <Link to={"/projects"} className="cta learn-more">Learn More</Link>
                 <figure className="landing-img">
                     <img src="/images/elvehavn_1.jpg" alt="landing page image" width="180" height="180" />
                     {/* <figcaption>Me in Elvehavn, Trondheim</figcaption> */}
