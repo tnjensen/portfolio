@@ -28,7 +28,7 @@ header{
             background-color: var(--text-white);
             padding: 15px 30px 15px 15px;
 
-            li.active{
+            li a.active{
                border-bottom: 1px solid var(--red);
             }
             a{

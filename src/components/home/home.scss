@@ -34,14 +34,16 @@
             text-align: center;
             padding: 9px 12px;
             border-radius: 3px;
-            border: none;
             position: relative;
             top: 10px;
+            border: 1px solid var(--cta-error);
 
             &:hover{
                 color: var(--cta-error);
                 background-color: var(--text-white);
                 cursor: pointer;
+                border: 1px solid var(--cta-error);
+                
             }
         }
         

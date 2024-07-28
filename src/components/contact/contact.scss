@@ -79,6 +79,7 @@
          .contact-form input[type="submit"]:hover{
              background-color: var(--text-white);
              color: var(--cta-error);
+             border: 1px solid var(--cta-error);
          }
          .form-error{
              color: var(--cta-error);
